@@ -218,7 +218,7 @@ void randomfoodplacement(struct node* head, struct food* f){
     int success = 1;
     int x = rand() % 10;
     int y = rand() % 10;
-    while(current->next != NULL){
+    while(current != NULL){
         if(current->x == x*50 && current->y == y*50){
             success = 0;
             randomfoodplacement(head,f);
