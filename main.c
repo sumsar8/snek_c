@@ -189,7 +189,7 @@ bool checkBackward(int dirx, int diry, struct node* head) {
 bool headTouchesBody(struct node* head) {
     struct node* current = head->next;
     while (current != NULL) {
-        if (head->x == current->x && head->y == current->y || head->x > 499 || head->x < 0 || head->y > 499 || head->y < 0) {
+        if (head->x == current->x && head->y == current->y || head->x > SCREEN_WIDTH-1|| head->x < 0 || head->y > SCREEN_HEIGHT-1 || head->y < 0) {
             return true;
         }
         current = current->next;
